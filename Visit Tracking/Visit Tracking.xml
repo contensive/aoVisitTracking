@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<Collection name="Visit Tracking" guid="{A84A7D7A-034A-42A2-84C7-F9B6829BE4DC}" system="No" updatable="Yes" blockNavigatorNode="No">
+	<HelpLink></HelpLink>
+	<Help></Help>
+	<Addon name="processTracking" guid="{3BD66513-7D2D-4814-804C-B4B63B451B63}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID></ActiveXProgramID>
+		<DotNetClass><![CDATA[aoVisitTracking.processTracksClass]]></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>No</Content>
+		<Template>No</Template>
+		<Email>No</Email>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Visit Tracking Manager" guid="{74CAA5D0-B402-48CC-B69E-B3D56A56C34F}" type="Tool">
+		<Copy><![CDATA[<h1>Visit Tracking</h1>]]></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>No</Content>
+		<Template>No</Template>
+		<Email>No</Email>
+		<Admin>No</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Visits Report" guid="{E19AFBDF-F0D3-417A-9E7A-8467629828BC}" type="Report">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID></ActiveXProgramID>
+		<DotNetClass><![CDATA[aoVisitTracking.reportVisitsClass]]></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>Yes</BlockEditTools>
+		<FormXML></FormXML>
+		<IncludeAddon name="Admin Framework Resources" guid="{6A0FEACA-BBB0-40C0-90EC-594867C26621}"/>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Email>No</Email>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<CDef Name="Tracking Segment Page Rules" Active="1" AdminOnly="0" AllowAdd="1" AllowCalendarEvents="0" AllowContentChildTool="0" AllowContentTracking="0" AllowDelete="1" AllowMetaContent="0" AllowTopicRules="0" AllowWorkflowAuthoring="0" AuthoringDataSourceName="Default" AuthoringTableName="vtTrackingSegmentPageRules" ContentDataSourceName="Default" ContentTableName="vtTrackingSegmentPageRules" DefaultSortMethod="By Name" DeveloperOnly="0" DropDownFieldList="Name" EditorGroupName="" Parent="" IconLink="" IconHeight="0" IconWidth="0" IconSprites="0" isbasecontent="0" guid="{8174ACDC-85A1-4A72-AF98-72FBD77AE926}" >
+		<Field Name="Name" active="True" AdminOnly="False" Authorable="True" Caption="Name" DeveloperOnly="False" EditSortPriority="110" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="Active" active="True" AdminOnly="False" Authorable="False" Caption="Active" DeveloperOnly="False" EditSortPriority="200" FieldType="Boolean" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="1" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="SortOrder" active="True" AdminOnly="False" Authorable="False" Caption="Alpha Sort Order" DeveloperOnly="False" EditSortPriority="2000" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="trackingSegmentId" active="True" AdminOnly="False" Authorable="True" Caption="Tracking Segment" DeveloperOnly="False" EditSortPriority="1000" FieldType="Lookup" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="Tracking Segments" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="pageId" active="True" AdminOnly="False" Authorable="True" Caption="Page" DeveloperOnly="False" EditSortPriority="1010" FieldType="Lookup" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="Page Content" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+	</CDef>
+	<CDef Name="Tracks" Active="1" AdminOnly="0" AllowAdd="1" AllowCalendarEvents="0" AllowContentChildTool="0" AllowContentTracking="0" AllowDelete="1" AllowMetaContent="0" AllowTopicRules="0" AllowWorkflowAuthoring="0" AuthoringDataSourceName="Default" AuthoringTableName="vtTracks" ContentDataSourceName="Default" ContentTableName="vtTracks" DefaultSortMethod="By Name" DeveloperOnly="0" DropDownFieldList="Name" EditorGroupName="" Parent="" IconLink="" IconHeight="0" IconWidth="0" IconSprites="0" isbasecontent="0" guid="{F0221EDB-349F-4BCD-8C14-503702071AB3}" >
+		<Field Name="Name" active="True" AdminOnly="False" Authorable="True" Caption="Name" DeveloperOnly="False" EditSortPriority="110" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="Active" active="True" AdminOnly="False" Authorable="False" Caption="Active" DeveloperOnly="False" EditSortPriority="200" FieldType="Boolean" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="1" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="SortOrder" active="True" AdminOnly="False" Authorable="False" Caption="Alpha Sort Order" DeveloperOnly="False" EditSortPriority="2000" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="trackingSegmentId" active="True" AdminOnly="False" Authorable="True" Caption="Tracking Segment" DeveloperOnly="False" EditSortPriority="1000" FieldType="Lookup" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="Tracking Segments" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="dateStart" active="True" AdminOnly="False" Authorable="True" Caption="Start Date" DeveloperOnly="False" EditSortPriority="1010" FieldType="Date" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="count" active="False" AdminOnly="False" Authorable="False" Caption="Count" DeveloperOnly="False" EditSortPriority="200" FieldType="Integer" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="cnt" active="True" AdminOnly="False" Authorable="True" Caption="Count" DeveloperOnly="False" EditSortPriority="200" FieldType="Integer" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="pageIdList" active="True" AdminOnly="False" Authorable="True" Caption="Page ID List" DeveloperOnly="False" EditSortPriority="120" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+	</CDef>
+	<CDef Name="Tracking Segments" Active="1" AdminOnly="0" AllowAdd="1" AllowCalendarEvents="0" AllowContentChildTool="0" AllowContentTracking="0" AllowDelete="1" AllowMetaContent="0" AllowTopicRules="0" AllowWorkflowAuthoring="0" AuthoringDataSourceName="Default" AuthoringTableName="vtTrackingSegments" ContentDataSourceName="Default" ContentTableName="vtTrackingSegments" DefaultSortMethod="By Name" DeveloperOnly="0" DropDownFieldList="Name" EditorGroupName="" Parent="" IconLink="" IconHeight="0" IconWidth="0" IconSprites="0" isbasecontent="0" guid="{028D3A25-B9F2-4AEE-A782-D7BD5848D53B}" >
+		<Field Name="Name" active="True" AdminOnly="False" Authorable="True" Caption="Name" DeveloperOnly="False" EditSortPriority="110" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="Active" active="True" AdminOnly="False" Authorable="True" Caption="Active" DeveloperOnly="False" EditSortPriority="200" FieldType="Boolean" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="1" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="SortOrder" active="True" AdminOnly="False" Authorable="False" Caption="Alpha Sort Order" DeveloperOnly="False" EditSortPriority="2000" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="ReferringSite" active="True" AdminOnly="False" Authorable="True" Caption="Referring Site Includes" DeveloperOnly="False" EditSortPriority="1000" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="ReferringPathPage" active="True" AdminOnly="False" Authorable="True" Caption="Referring Page/Page includes" DeveloperOnly="False" EditSortPriority="1010" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="LandingPageId" active="True" AdminOnly="False" Authorable="True" Caption="Landing Page" DeveloperOnly="False" EditSortPriority="1020" FieldType="Lookup" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="Page Content" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="Pages" active="True" AdminOnly="False" Authorable="True" Caption="Pages" DeveloperOnly="False" EditSortPriority="3000" FieldType="ManyToMany" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="Pages" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="trackingSegmentId" ManyToManyRuleSecondaryField="pageId" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="Page Content" ManyToManyRuleContent="Tracking Segment Page Rules" ></Field>
+		<Field Name="dateLastedProcess" active="False" AdminOnly="False" Authorable="False" Caption="Last Processed Date" DeveloperOnly="False" EditSortPriority="2000" FieldType="Date" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="dateLastProcessed" active="True" AdminOnly="False" Authorable="True" Caption="Date Last Processed" DeveloperOnly="False" EditSortPriority="2000" FieldType="Date" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+	</CDef>
+	<CDef Name="Page Content" guid="{02203F58-0921-4F75-A089-0EAD6E8FEB4F}" >
+		<Field Name="trackingSegments" active="True" AdminOnly="False" Authorable="True" Caption="Tracking Segments" DeveloperOnly="False" EditSortPriority="1000" FieldType="ManyToMany" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="Visit Tracking" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="pageId" ManyToManyRuleSecondaryField="trackingSegmentId" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="Tracking Segments" ManyToManyRuleContent="Tracking Segment Page Rules" ></Field>
+	</CDef>
+	<Resource name="adminframework.dll" type="executable" path="" />
+	<Resource name="aovisittracking.dll" type="executable" path="" />
+</Collection>

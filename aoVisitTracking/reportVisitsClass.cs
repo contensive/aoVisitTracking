@@ -28,7 +28,7 @@ namespace aoVisitTracking
                 CPCSBaseClass cs = cp.CSNew();
                 int dateNumber;
                 //int timeNumber;
-                double plotValue;
+                //double plotValue;
                 DateTime plotDate = new DateTime();
                 DateTime zeroDay = new DateTime( 1899,12,30 );
                 DateTime rightNow = DateTime.Now;
@@ -36,11 +36,37 @@ namespace aoVisitTracking
                 double dateNumberStart= dateNumberEnd - 365;
                 //
                 report.addColumn();
-                report.columnCaption = "column1 caption";
-                report.columnCaptionClass = "column1CaptionClass";
+                report.columnCaption = "Visits";
+                report.columnCaptionClass = afwStyles.afwWidth100px;
+                report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.addColumn();
+                report.columnCaption = "Bounces";
+                report.columnCaptionClass = afwStyles.afwWidth100px;
+                report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.addColumn();
+                report.columnCaption = "New";
+                report.columnCaptionClass = afwStyles.afwWidth100px;
+                report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.addColumn();
+                report.columnCaption = "Auth";
+                report.columnCaptionClass = afwStyles.afwWidth100px;
+                report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.addColumn();
+                report.columnCaption = "Mobile";
+                report.columnCaptionClass = afwStyles.afwWidth100px;
+                report.columnCellClass = afwStyles.afwTextAlignRight;
+                //report.addColumn();
+                //report.columnCaption = "Known Bots";
+                //report.columnCaptionClass = afwStyles.afwWidth100px;
+                //report.columnCellClass = afwStyles.afwTextAlignRight;
+                //report.addColumn();
+                //report.columnCaption = "No Cookie";
+                //report.columnCaptionClass = afwStyles.afwWidth100px;
+                //report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.chartWidth = 800;
                 //
                 sql = "select "
-                    + " DateNumber,TimeNumber,Visits,PagesViewed,NewVisitorVisits,AveTimeOnSite,SinglePageVisits,AuthenticatedVisits"
+                    + " DateNumber,TimeNumber,Visits,PagesViewed,NewVisitorVisits,AveTimeOnSite,SinglePageVisits,AuthenticatedVisits,mobileVisits,botVisits,noCookieVisits"
                     + " from"
                     + " ccVisitSummary"
                     + " where"
@@ -55,13 +81,17 @@ namespace aoVisitTracking
                     do 
                     {
                         dateNumber = cs.GetInteger( "dateNumber");
-
                         //timeNumber = int( cs.GetNumber("timeNumber") + 0.5);
-                        plotValue = cs.GetNumber( "visits" );
-                        plotDate = new DateTime(1900,1,1).AddDays(dateNumber);
+                        plotDate = new DateTime(1899,12,30).AddDays(dateNumber);
                         report.addRow();
                         report.rowDate = plotDate;
-                        report.setCell(plotValue);
+                        report.setCell(cs.GetNumber("visits"));
+                        report.setCell(cs.GetNumber("SinglePageVisits"));
+                        report.setCell(cs.GetNumber("NewVisitorVisits"));
+                        report.setCell(cs.GetNumber("AuthenticatedVisits"));
+                        report.setCell(cs.GetNumber("mobileVisits"));
+                        //report.setCell(cs.GetNumber("botVisits"));
+                        //report.setCell(cs.GetNumber("noCookieVisits"));
                         cs.GoNext();
                     } while ( cs.OK());
                 }
@@ -70,6 +100,7 @@ namespace aoVisitTracking
                 doc.body = report.getHtml(cp);
                 doc.title = "Visits";
                 doc.addFormButton( "Refresh" );
+                doc.isOuterContainer = true;
                 returnHtml = doc.getHtml(cp);
             }
             catch( Exception ex)
