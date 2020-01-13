@@ -95,8 +95,8 @@
 		<JavascriptBodyEnd></JavascriptBodyEnd>
 		<MetaDescription></MetaDescription>
 		<OtherHeadTags></OtherHeadTags>
-		<Content>Yes</Content>
-		<Template>Yes</Template>
+		<Content>no</Content>
+		<Template>no</Template>
 		<Email>No</Email>
 		<Admin>Yes</Admin>
 		<OnPageEndEvent>No</OnPageEndEvent>
