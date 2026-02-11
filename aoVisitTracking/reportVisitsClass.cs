@@ -1,68 +1,62 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Contensive.BaseClasses;
-using adminFramework;
+﻿using Contensive.BaseClasses;
+using System;
+using static Contensive.BaseClasses.LayoutBuilder.LayoutBuilderBaseClass;
 //
-namespace aoVisitTracking
-{
-    //
-    // 1) Change the namespace to the collection name
-    // 2) Change this class name to the addon name
-    // 3) Create a Contensive Addon record with the namespace apCollectionName.ad
-    // 3) add reference to CPBase.DLL, typically installed in c:\program files\kma\contensive\
-    //
-    public class reportVisitsClass  : Contensive.BaseClasses.AddonBaseClass
-    {
-        //
-        // execute method is the only public
-        //
-        public override object Execute(Contensive.BaseClasses.CPBaseClass cp)
-        {
+namespace aoVisitTracking {
+    /// <summary>
+    /// addon class
+    /// </summary>
+    public class reportVisitsClass : Contensive.BaseClasses.AddonBaseClass {
+        /// <summary>
+        /// addon execute method
+        /// </summary>
+        /// <param name="cp"></param>
+        /// <returns></returns>
+        public override object Execute(Contensive.BaseClasses.CPBaseClass cp) {
             string returnHtml = "";
-            try
-            {
-                formSimpleClass doc = new formSimpleClass();
-                reportTimeLineChartClass report = new reportTimeLineChartClass();
+            try {
+                var doc = cp.AdminUI.CreateLayoutBuilder();
+                var report = cp.AdminUI.CreateLayoutChartTimeLine();
+
                 string sql;
                 CPCSBaseClass cs = cp.CSNew();
                 int dateNumber;
                 //int timeNumber;
                 //double plotValue;
                 DateTime plotDate = new DateTime();
-                DateTime zeroDay = new DateTime( 1899,12,30 );
+                DateTime zeroDay = new DateTime(1899, 12, 30);
                 DateTime rightNow = DateTime.Now;
-                double dateNumberEnd= (rightNow-zeroDay).Days-1;
-                double dateNumberStart= dateNumberEnd - 365;
+                double dateNumberEnd = (rightNow - zeroDay).Days - 1;
+                double dateNumberStart = dateNumberEnd - 365;
                 //
                 report.addColumn();
                 report.columnCaption = "Visits";
-                report.columnCaptionClass = afwStyles.afwWidth100px;
-                report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.columnCaptionClass = AfwStyles.afwWidth100px;
+                report.columnCellClass = AfwStyles.afwTextAlignRight;
                 report.addColumn();
                 report.columnCaption = "Bounces";
-                report.columnCaptionClass = afwStyles.afwWidth100px;
-                report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.columnCaptionClass = AfwStyles.afwWidth100px;
+                report.columnCellClass = AfwStyles.afwTextAlignRight;
                 report.addColumn();
                 report.columnCaption = "New";
-                report.columnCaptionClass = afwStyles.afwWidth100px;
-                report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.columnCaptionClass = AfwStyles.afwWidth100px;
+                report.columnCellClass = AfwStyles.afwTextAlignRight;
                 report.addColumn();
                 report.columnCaption = "Auth";
-                report.columnCaptionClass = afwStyles.afwWidth100px;
-                report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.columnCaptionClass = AfwStyles.afwWidth100px;
+                report.columnCellClass = AfwStyles.afwTextAlignRight;
                 report.addColumn();
                 report.columnCaption = "Mobile";
-                report.columnCaptionClass = afwStyles.afwWidth100px;
-                report.columnCellClass = afwStyles.afwTextAlignRight;
+                report.columnCaptionClass = AfwStyles.afwWidth100px;
+                report.columnCellClass = AfwStyles.afwTextAlignRight;
                 //report.addColumn();
                 //report.columnCaption = "Known Bots";
-                //report.columnCaptionClass = afwStyles.afwWidth100px;
-                //report.columnCellClass = afwStyles.afwTextAlignRight;
+                //report.columnCaptionClass = AfwStyles.afwWidth100px;
+                //report.columnCellClass = AfwStyles.afwTextAlignRight;
                 //report.addColumn();
                 //report.columnCaption = "No Cookie";
-                //report.columnCaptionClass = afwStyles.afwWidth100px;
-                //report.columnCellClass = afwStyles.afwTextAlignRight;
+                //report.columnCaptionClass = AfwStyles.afwWidth100px;
+                //report.columnCellClass = AfwStyles.afwTextAlignRight;
                 report.chartWidth = 800;
                 //
                 sql = "select "
@@ -75,14 +69,12 @@ namespace aoVisitTracking
                     + " AND(DateNumber<=" + dateNumberEnd.ToString() + ")"
                     + " order by"
                     + " DateNumber, TimeNumber";
-                if (cs.OpenSQL(sql))
-                {
-                    
-                    do 
-                    {
-                        dateNumber = cs.GetInteger( "dateNumber");
+                if (cs.OpenSQL(sql)) {
+
+                    do {
+                        dateNumber = cs.GetInteger("dateNumber");
                         //timeNumber = int( cs.GetNumber("timeNumber") + 0.5);
-                        plotDate = new DateTime(1899,12,30).AddDays(dateNumber);
+                        plotDate = new DateTime(1899, 12, 30).AddDays(dateNumber);
                         report.addRow();
                         report.rowDate = plotDate;
                         report.setCell(cs.GetNumber("visits"));
@@ -93,18 +85,16 @@ namespace aoVisitTracking
                         //report.setCell(cs.GetNumber("botVisits"));
                         //report.setCell(cs.GetNumber("noCookieVisits"));
                         cs.GoNext();
-                    } while ( cs.OK());
+                    } while (cs.OK());
                 }
                 cs.Close();
                 //
                 doc.body = report.getHtml(cp);
                 doc.title = "Visits";
-                doc.addFormButton( "Refresh" );
+                doc.addFormButton("Refresh");
                 doc.isOuterContainer = true;
                 returnHtml = doc.getHtml(cp);
-            }
-            catch( Exception ex)
-            {
+            } catch (Exception ex) {
             }
 
             return returnHtml;
